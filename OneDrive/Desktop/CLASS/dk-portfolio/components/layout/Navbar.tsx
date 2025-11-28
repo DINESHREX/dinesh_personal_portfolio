@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -37,9 +38,18 @@ export function Navbar() {
             )}
         >
             <div className="container mx-auto px-6 flex items-center justify-between max-w-[1400px]">
-                <Link href="/" className="text-2xl font-bold tracking-tighter group">
-                    <span className="text-text group-hover:text-accent transition-colors">DINESH</span>
-                    <span className="text-accent">.</span>
+                <Link href="/" className="relative group flex items-center justify-center">
+                    <div className="relative w-14 h-14 transition-transform duration-300 scale-[2.5] group-hover:scale-[2.7]">
+                        <Image
+                            src="/DK-removebg-preview.png"
+                            alt="DK Logo"
+                            fill
+                            className="object-contain"
+                            style={{
+                                filter: "brightness(0) saturate(100%) invert(66%) sepia(60%) saturate(5341%) hue-rotate(149deg) brightness(93%) contrast(93%) drop-shadow(0 0 5px rgba(6, 182, 212, 0.5))"
+                            }}
+                        />
+                    </div>
                 </Link>
 
                 {/* Desktop Nav */}
