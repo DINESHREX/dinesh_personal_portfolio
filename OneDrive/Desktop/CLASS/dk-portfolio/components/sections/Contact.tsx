@@ -54,7 +54,7 @@ export function Contact() {
 
     return (
         <Section id="contact" className="bg-muted/5">
-            <div className="container mx-auto px-6 max-w-[1000px]">
+            <div className="container mx-auto px-4 md:px-6 max-w-[1000px]">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ export function Contact() {
                         </Card>
                     </div>
 
-                    <Card className="p-8">
+                    <Card className="p-6 md:p-8">
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-text mb-1">
